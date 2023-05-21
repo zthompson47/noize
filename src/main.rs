@@ -18,7 +18,8 @@ fn sound() {
 }
 
 fn image() {
-    let noise = PNoise1::new(47, 64, 1024, Ease::Bounce);
+    //let noise = PNoise1::new(47, 64, 1024, Ease::Bounce);
+    let noise = PNoise1::new(47, 16, 1024, Ease::SmoothStep);
     File::Png("out_noise.png", noise.output.as_slice()).save();
     File::Png("out_grid.png", noise.grid.as_slice()).save();
 }
