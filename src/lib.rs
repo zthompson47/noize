@@ -10,15 +10,15 @@ pub use kernel::{NoiseKernel, NoiseKernelV1};
 pub use texture::{make_noise, make_noise2, noise0, noise1, noise2, noise3, textures};
 
 pub fn smooth_step(left: f32, right: f32, x: f32) -> f32 {
-    left + (right - left) * x * x * (3.0 - 2.0 * x)
+    left + (right - left) * x * x * (3. - 2. * x)
 }
 
 pub fn smoother_step(left: f32, right: f32, x: f32) -> f32 {
-    left + (right - left) * x * x * x * (x * (x * 6.0 - 15.0) + 10.0)
+    left + (right - left) * x * x * x * (x * (x * 6. - 15.) + 10.)
 }
 
 pub fn smoothest_step(left: f32, right: f32, x: f32) -> f32 {
-    left + (right - left) * x * x * x * x * (x * (x * (x * -20.0 + 70.0) - 84.0) + 35.0)
+    left + (right - left) * x * x * x * x * (x * (x * (x * -20. + 70.) - 84.) + 35.)
 }
 
 pub enum File<'a> {
