@@ -3,7 +3,7 @@ use easer::functions::*;
 use rand::{Rng, SeedableRng};
 use rand_chacha::ChaCha8Rng;
 
-use noise::{Ease, File, PNoise1};
+use noize::{Ease, File, PNoise1};
 
 fn main() {
     //textures().unwrap();
